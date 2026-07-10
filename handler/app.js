@@ -12,7 +12,7 @@ function runRenderForm() {
     renderForm(JsonData, PayloadMessage || {});
 }
 document.addEventListener('DOMContentLoaded', () => {
-    fetch('/dana/assets/json/customFieldsForDana.json')
+    fetch('/assets/json/customFieldsForDana.json')
         .then(response => response.json())
         .then(jsonData => {
             JsonData = jsonData;  
