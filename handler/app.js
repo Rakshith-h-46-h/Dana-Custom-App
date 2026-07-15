@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     fetch('./assets/json/customFieldsForDana.json')
         .then(response => response.json())
         .then(jsonData => {
-            JsonData = jsonData;  
+            JsonData = jsonData;
 
             runRenderForm();
 
@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
 //     const messageDisplay = document.getElementById('ticket-title');
 //     messageDisplay.innerText += ' (#' + event.data.ticketData.ticketId + ')';
 
-//     PayloadMessage = event.data; 
+//     PayloadMessage = event.data;
 
 //     runRenderForm();
 // });
