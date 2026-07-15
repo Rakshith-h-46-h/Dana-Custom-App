@@ -87,15 +87,12 @@ matchingField.field_list_details.forEach(field => {
                 // Ensure the new dropdown also has event listeners for further nesting
               addDynamicBehavior(formData);
 
-                let selectElements = document.querySelectorAll('select');
-                //console.log(selectElements, "selectElement")
+                 let selectElements = document.querySelectorAll('select');
 
-                // Loop through each select element and initialize Choices.js with search enabled
-                selectElements.forEach(function (selectElement) {
-                    console.log(selectElement, "selectElement")
-                    new Choices(selectElement, {
-                        searchEnabled: true,  // Enables the search functionality
-                         shouldSort: false,
+            selectElements.forEach(function (selectElement) {
+                new Choices(selectElement, {
+                    searchEnabled: true,
+                    shouldSort: false,
                     itemSelectText: '',
                     searchResultLimit: 9999,
                     renderChoiceLimit: -1,
@@ -104,8 +101,8 @@ matchingField.field_list_details.forEach(field => {
                     fuseOptions: {
                         threshold: 0.3
                     } // Enables the search functionality
-                    });
                 });
+            });
             }
         }
     });
