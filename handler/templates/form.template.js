@@ -68,41 +68,44 @@ export function addDynamicBehavior(formData) {
 
             console.log("Matching Field:", matchingField);
             const parentField = target.closest(".field-container");
-const nestedContainer = parentField.parentElement.querySelector(":scope > .nested-fields");
+            const nestedContainer = parentField.parentElement.querySelector(":scope > .nested-fields");
 
             if (matchingField && nestedContainer) {
                 // Clear previous nested fields
                 nestedContainer.innerHTML = '';
 
-               nestedContainer.innerHTML = "";
+                nestedContainer.innerHTML = "";
 
-matchingField.field_list_details.forEach(field => {
-    nestedContainer.insertAdjacentHTML(
-        "beforeend",
-        generateField(field, true)
-    );
-});
-                
+                matchingField.field_list_details.forEach(field => {
+                    nestedContainer.insertAdjacentHTML(
+                        "beforeend",
+                        generateField(field, true)
+                    );
+                });
+
 
                 // Ensure the new dropdown also has event listeners for further nesting
-              addDynamicBehavior(formData);
+                addDynamicBehavior(formData);
 
-                 let selectElements = document.querySelectorAll('select');
+                let selectElements = document.querySelectorAll('select');
+                //console.log(selectElements, "selectElement")
 
-            selectElements.forEach(function (selectElement) {
-                new Choices(selectElement, {
-                    searchEnabled: true,
-                    shouldSort: false,
-                    itemSelectText: '',
-                    searchResultLimit: 9999,
-                    renderChoiceLimit: -1,
-                    removeItemButton: true,
-                    allowHTML: false,
-                    fuseOptions: {
-                        threshold: 0.3
-                    } // Enables the search functionality
+                // Loop through each select element and initialize Choices.js with search enabled
+                selectElements.forEach(function (selectElement) {
+                    console.log(selectElement, "selectElement")
+                    new Choices(selectElement, {
+                        searchEnabled: true,
+                        shouldSort: false,
+                        itemSelectText: '',
+                        searchResultLimit: 9999,
+                        renderChoiceLimit: -1,
+                        removeItemButton: true,
+                        allowHTML: false,
+                        fuseOptions: {
+                            threshold: 0.3
+                        }  // Enables the search functionality
+                    });
                 });
-            });
             }
         }
     });
