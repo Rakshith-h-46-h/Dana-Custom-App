@@ -23,8 +23,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
             selectElements.forEach(function (selectElement) {
                 new Choices(selectElement, {
-                    searchEnabled: true, // Enables the search functionality
-                     shouldSort: false,
+                    searchEnabled: true,
+                    shouldSort: false,
                     itemSelectText: '',
                     searchResultLimit: 9999,
                     renderChoiceLimit: -1,
