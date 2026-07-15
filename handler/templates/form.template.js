@@ -94,7 +94,16 @@ matchingField.field_list_details.forEach(field => {
                 selectElements.forEach(function (selectElement) {
                     console.log(selectElement, "selectElement")
                     new Choices(selectElement, {
-                        searchEnabled: true  // Enables the search functionality
+                        searchEnabled: true,  // Enables the search functionality
+                         shouldSort: false,
+                    itemSelectText: '',
+                    searchResultLimit: 9999,
+                    renderChoiceLimit: -1,
+                    removeItemButton: true,
+                    allowHTML: false,
+                    fuseOptions: {
+                        threshold: 0.3
+                    } // Enables the search functionality
                     });
                 });
             }
