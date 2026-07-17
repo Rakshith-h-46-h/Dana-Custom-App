@@ -44,7 +44,7 @@ window.addEventListener('message', function(event) {
     const messageDisplay = document.getElementById('ticket-title');
     messageDisplay.innerText += ' (#' + event.data.ticketData.ticketId + ')';
 
-//     PayloadMessage = event.data;
+    PayloadMessage = event.data;
 
-//     runRenderForm();
-// });
+    runRenderForm();
+});
