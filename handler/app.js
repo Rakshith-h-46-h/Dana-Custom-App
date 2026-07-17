@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 window.addEventListener('message', function(event) {
-    // console.log('Payload message: ', event.data);
+     console.log('Payload message: ', event.data);
     const messageDisplay = document.getElementById('ticket-title');
     messageDisplay.innerText += ' (#' + event.data.ticketData.ticketId + ')';
 
