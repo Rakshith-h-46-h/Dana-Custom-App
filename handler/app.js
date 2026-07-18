@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(response => response.json())
         .then(jsonData => {
             JsonData = jsonData;
+            console.log("JSON Loaded:", jsonData);
 
             runRenderForm();
 
