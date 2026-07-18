@@ -1,4 +1,5 @@
 import { renderForm } from './components/mainForm.js';
+console.log("runRenderForm called");
 
 let JsonData = null;
 let PayloadMessage = null;
