@@ -3,6 +3,8 @@ console.log("runRenderForm called");
 
 let JsonData = null;
 let PayloadMessage = null;
+const ticket = await yAppWidget.getTicket();
+console.log(ticket)
 
 // function runRenderForm() {
 //     if (JsonData && PayloadMessage) {
@@ -18,8 +20,6 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(jsonData => {
             JsonData = jsonData;
             console.log("JSON Loaded:", jsonData);
-             console.log("PayloadMessage:", PayloadMessage);
-            console.log(window.PayloadMessage);
             runRenderForm();
 
             let selectElements = document.querySelectorAll('select');
