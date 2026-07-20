@@ -6,14 +6,14 @@ let PayloadMessage = null;
 
 
 
-// function runRenderForm() {
-//     if (JsonData && PayloadMessage) {
-//         renderForm(JsonData, PayloadMessage);
-//     }
-// }
 function runRenderForm() {
-    renderForm(JsonData, PayloadMessage || {});
-} 
+    if (JsonData && PayloadMessage) {
+        renderForm(JsonData, PayloadMessage);
+    }
+}
+// function runRenderForm() {
+//     renderForm(JsonData, PayloadMessage || {});
+// } 
 document.addEventListener('DOMContentLoaded', () => {
     fetch('./assets/json/customFieldsForDana.json')
         .then(response => response.json())
