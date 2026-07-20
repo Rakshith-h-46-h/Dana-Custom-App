@@ -3,8 +3,8 @@ console.log("runRenderForm called");
 
 let JsonData = null;
 let PayloadMessage = null;
-const ticket = await yAppWidget.getTicket();
-console.log(ticket)
+const ticket =  yAppWidget.getTicket();
+console.log(ticket, "Ticket details")
 
 // function runRenderForm() {
 //     if (JsonData && PayloadMessage) {
