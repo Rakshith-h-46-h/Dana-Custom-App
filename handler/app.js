@@ -3,15 +3,7 @@ console.log("runRenderForm called");
 
 let JsonData = null;
 let PayloadMessage = null;
-window.addEventListener('message', function(event) {
-     console.log('Payload message: ', event.data);
-    const messageDisplay = document.getElementById('ticket-title');
-    messageDisplay.innerText += ' (#' + event.data.ticketData.ticketId + ')';
-console.log("Waiting for payload...");
-    PayloadMessage = event.data;
 
-    runRenderForm();
-});
 
 
 // function runRenderForm() {
