@@ -18,7 +18,8 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(jsonData => {
             JsonData = jsonData;
             console.log("JSON Loaded:", jsonData);
-
+             console.log("PayloadMessage:", PayloadMessage);
+            console.log(window.PayloadMessage);
             runRenderForm();
 
             let selectElements = document.querySelectorAll('select');
