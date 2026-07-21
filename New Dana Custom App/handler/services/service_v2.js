@@ -1,4 +1,4 @@
-import { yAppWidget } from "../app.js?t=1781172527";
+import { yAppWidget } from "../app.js";
 
 export function addSubmitFormEventListener() {
   let button = document.getElementById("btn_store");
