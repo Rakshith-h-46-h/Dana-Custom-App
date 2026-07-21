@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
       window.IntentCustomFieldsData = intentCustomFieldsData;
       runRenderForm();
     })
-    .catch((error) => console.error("Error fetching JSON:", error));
+    .catch((error) => console.log("Error fetching JSON:", error));
 
   fetch("./assets/json/defaultFields.json")
     .then((response) => response.json())
@@ -71,5 +71,5 @@ document.addEventListener("DOMContentLoaded", () => {
       window.TaxonomyV2CustomFieldsData = taxonomyV2CustomFieldsData;
       runRenderForm();
     })
-    .catch((error) => console.error("Error fetching JSON:", error));
+    .catch((error) => console.log("Error fetching JSON:", error));
 });
