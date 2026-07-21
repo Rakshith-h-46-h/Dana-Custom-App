@@ -1,4 +1,4 @@
-import {generateCustomField} from "./util.js?t=1781172527";
+import {generateCustomField} from "./util.js";
 
 const CHANNEL_CF_KEY = 'k44';
 const CABANG_PENERIMA_CF_KEY = 'k45';
