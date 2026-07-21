@@ -1,4 +1,4 @@
-import { generateCustomField } from "./util.js?t=1781172527";
+import { generateCustomField } from "./util.js";
 
 const INTENT_CUSTOM_FIELD_KEY = 'k49';
 
