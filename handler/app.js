@@ -1,5 +1,5 @@
 import { applyDebugState } from "./components/applyDebugState.js";
-import { renderForm } from "./components/main_form.js?util.js";
+import { renderForm } from "./components/main_form.js";
 
 export let yAppWidget = null;
 
