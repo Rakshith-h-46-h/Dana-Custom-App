@@ -1,7 +1,7 @@
-import {generateTaxonomyV2, addTaxonomyV2EventListener} from "./taxonomy_v2.template.js?t=1781172527";
-import {generateIntent, addIntentEventListener} from "./intent.template.js?t=1781172527";
-import {addDefaultFieldsEventListener, generateDefaultFields} from "./default_fields.template.js?t=1781172527";
-import {addSubmitFormEventListener} from "../services/service_v2.js?t=1781172527";
+import {generateTaxonomyV2, addTaxonomyV2EventListener} from "./taxonomy_v2.template.js";
+import {generateIntent, addIntentEventListener} from "./intent.template.js";
+import {addDefaultFieldsEventListener, generateDefaultFields} from "./default_fields.template.js";
+import {addSubmitFormEventListener} from "../services/service_v2.js";
 
 export function renderForm() {
   const formContainer = document.getElementById("formContainer");
