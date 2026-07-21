@@ -49,7 +49,7 @@ function runRenderForm() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  fetch("./assets/json/intentCustomFields.json?t=1781172527")
+  fetch("./assets/json/intentCustomFields.json")
     .then((response) => response.json())
     .then((intentCustomFieldsData) => {
       window.IntentCustomFieldsData = intentCustomFieldsData;
@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
     })
     .catch((error) => console.error("Error fetching JSON:", error));
 
-  fetch("./assets/json/defaultFields.json?t=1781172527")
+  fetch("./assets/json/defaultFields.json")
     .then((response) => response.json())
     .then((defaultFieldsData) => {
       window.DefaultFieldsData = defaultFieldsData;
@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
     })
     .catch((error) => console.error("Error fetching JSON:", error));
 
-  fetch("./assets/json/taxonomyV2CustomFields.json?t=1781172527")
+  fetch("./assets/json/taxonomyV2CustomFields.json")
     .then((response) => response.json())
     .then((taxonomyV2CustomFieldsData) => {
       window.TaxonomyV2CustomFieldsData = taxonomyV2CustomFieldsData;
