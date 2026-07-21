@@ -1,4 +1,4 @@
-import { escapeHtml, generateCustomField } from "./util.js?t=1781172527";
+import { escapeHtml, generateCustomField } from "./util.js";
 
 export function generateTaxonomyV2() {
   let fieldHtml = '';
