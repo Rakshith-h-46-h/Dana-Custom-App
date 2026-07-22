@@ -14,5 +14,17 @@
   {
     "key": "k19",
     "isRequired": false
+  },
+  {
+    "key": "s2",
+    "isRequired": false
+  },
+  {
+    "key": "s5",
+    "isRequired": false
+  },
+  {
+    "key": "s3",
+    "isRequired": false
   }
 ]
