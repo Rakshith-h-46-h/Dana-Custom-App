@@ -1,5 +1,3 @@
-import {generateTaxonomyV2, addTaxonomyV2EventListener} from "./taxonomy_v2.template.js";
-import {generateIntent, addIntentEventListener} from "./intent.template.js";
 import {addDefaultFieldsEventListener, generateDefaultFields} from "./default_fields.template.js";
 import {addSubmitFormEventListener} from "../services/service_v2.js";
 
