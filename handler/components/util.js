@@ -2,6 +2,7 @@ export function generateCustomField(cfKey, containerClassName, isRequired = fals
   let fieldHtml = '';
 
   const customField = window?.PayloadCustomFields?.find(cf => cf.key === cfKey);
+  console.table(window.PayloadCustomFields);
 
   if (customField) {
     if (customField.element === 'radiobuttons') fieldHtml += generateDropdownCustomField(customField, containerClassName, isRequired);
