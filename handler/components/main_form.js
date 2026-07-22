@@ -9,8 +9,7 @@ export function renderForm() {
   messageDisplay.innerText = "Conditional Custom Fields (#" + window.PayloadData.ticketId + ")";
 
   formHtml += generateDefaultFields();
-  formHtml += generateIntent();
-  formHtml += generateTaxonomyV2();
+ 
 
   formHtml += '<button id="btn_store">Submit</button>';
   formHtml += "</form>";
@@ -18,8 +17,7 @@ export function renderForm() {
   formContainer.innerHTML = formHtml;
 
   addDefaultFieldsEventListener();
-  addIntentEventListener();
-  addTaxonomyV2EventListener();
+  
 
   addSubmitFormEventListener();
 }
