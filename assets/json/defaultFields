@@ -1,0 +1,18 @@
+[
+  {
+    "key": "s2",
+    "isRequired": false
+  },
+  {
+    "key": "k17",
+    "isRequired": true
+  },
+  {
+    "key": "k12",
+    "isRequired": true
+  },
+  {
+    "key": "k15",
+    "isRequired": false
+  }
+]
