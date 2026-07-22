@@ -1,5 +1,6 @@
 import {generateCustomField} from "./util.js";
-
+const CHANNEL_CF_KEY = 'k44';
+const CABANG_PENERIMA_CF_KEY = 'k45';
 
 
 export function generateDefaultFields() {
