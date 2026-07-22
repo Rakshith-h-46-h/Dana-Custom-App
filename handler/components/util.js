@@ -3,6 +3,28 @@ export function generateCustomField(cfKey, containerClassName, isRequired = fals
 
   const customField = window?.PayloadCustomFields?.find(cf => cf.key === cfKey);
   console.table(window.PayloadCustomFields);
+  switch (customField.element) {
+    case "radiobuttons":
+        fieldHtml += generateDropdownCustomField(customField, containerClassName, isRequired);
+        break;
+
+    case "longText":
+    case "shortText":
+    case "text":
+        fieldHtml += generateTextCustomField(customField, containerClassName, isRequired);
+        break;
+
+    case "date":
+        fieldHtml += generateDateCustomField(customField, containerClassName, isRequired);
+        break;
+
+    case "number":
+        fieldHtml += generateNumberCustomField(customField, containerClassName, isRequired);
+        break;
+
+    default:
+        console.warn("Unsupported element:", customField.element, customField);
+}
 
   if (customField) {
     if (customField.element === 'radiobuttons') fieldHtml += generateDropdownCustomField(customField, containerClassName, isRequired);
