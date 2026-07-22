@@ -28,8 +28,6 @@ function runRenderForm() {
 
   if (
     window.DefaultFieldsData &&
-    window.IntentCustomFieldsData &&
-    window.TaxonomyV2CustomFieldsData &&
     window.PayloadData &&
     window.PayloadCustomFields
   ) {
@@ -49,14 +47,6 @@ function runRenderForm() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  fetch("./assets/json/intentCustomFields.json")
-    .then((response) => response.json())
-    .then((intentCustomFieldsData) => {
-      window.IntentCustomFieldsData = intentCustomFieldsData;
-      runRenderForm();
-    })
-    .catch((error) => console.log("Error fetching JSON:", error));
-
   fetch("./assets/json/defaultFields.json")
     .then((response) => response.json())
     .then((defaultFieldsData) => {
@@ -64,12 +54,4 @@ document.addEventListener("DOMContentLoaded", () => {
       runRenderForm();
     })
     .catch((error) => console.error("Error fetching JSON:", error));
-
-  fetch("./assets/json/taxonomyV2CustomFields.json")
-    .then((response) => response.json())
-    .then((taxonomyV2CustomFieldsData) => {
-      window.TaxonomyV2CustomFieldsData = taxonomyV2CustomFieldsData;
-      runRenderForm();
-    })
-    .catch((error) => console.log("Error fetching JSON:", error));
 });
