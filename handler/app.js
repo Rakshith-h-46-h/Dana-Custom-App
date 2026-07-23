@@ -79,17 +79,14 @@ function runRenderForm() {
 }
 
 export async function loadTeamTemplate(fileName) {
-  try {
-    const response = await fetch(`./assets/json/${fileName}.json`);
+    console.log("Loading:", fileName);
 
-    if (!response.ok) {
-      throw new Error(`Unable to load ${fileName}.json`);
-    }
+    const response = await fetch(`./assets/json/${fileName}.json`);
+    console.log("Status:", response.status);
 
     window.DefaultFieldsData = await response.json();
 
+    console.log("Loaded:", window.DefaultFieldsData);
+
     runRenderForm();
-  } catch (error) {
-    console.error("Error loading template:", error);
-  }
 }
