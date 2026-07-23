@@ -15,9 +15,5 @@ export function renderForm() {
   formHtml += "</form>";
 
   formContainer.innerHTML = formHtml;
-
-  addDefaultFieldsEventListener();
-  
-
   addSubmitFormEventListener();
 }
