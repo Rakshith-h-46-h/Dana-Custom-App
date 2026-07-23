@@ -21,7 +21,7 @@ export let yAppWidget = null;
     name: cf.name
   }))
 );
-      console.log(window.PayloadCustomFields.31.radiobuttons.0)
+      
 
       runRenderForm();
     })
