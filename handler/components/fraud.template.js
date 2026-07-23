@@ -1,6 +1,5 @@
 import {generateCustomField} from "./util.js";
-const CHANNEL_CF_KEY = 'k44';
-const CABANG_PENERIMA_CF_KEY = 'k45';
+const TEAM_CF_KEY = "k19";
 
 
 export function generateDefaultFields() {
@@ -8,8 +7,6 @@ export function generateDefaultFields() {
 
   window.DefaultFieldsData.forEach(defaultField => {
     fieldHtml += generateCustomField(defaultField.key, "default-field-container", defaultField.isRequired);
-
-    if (defaultField.key === CHANNEL_CF_KEY) fieldHtml += generateChannelCustomFields();
   })
 
   return fieldHtml;
@@ -17,42 +14,33 @@ export function generateDefaultFields() {
 
 function generateChannelCustomFields() {
   let fieldHtml = '';
-
-  const chosenChannel = window?.PayloadData?.customFields?.['k44'];
-
-  // when chosen channel is 'Cabang', generate 'Cabang Penerima' additional custom field
-  if (chosenChannel === 'Cabang') {
-    fieldHtml += generateCustomField(CABANG_PENERIMA_CF_KEY, 'branch-container');
-  }
-
   return fieldHtml;
 }
 
 export function addDefaultFieldsEventListener() {
   const formContainer = document.getElementById('formContainer');
 
-  formContainer.addEventListener('change', event => {
+formContainer.addEventListener("change", async (event) => {
     const eventTarget = event.target;
-    const eventDefaultFieldContainer = eventTarget.closest('.default-field-container');
 
-    if (!eventDefaultFieldContainer) return;
+    if (eventTarget.id !== "k19") return;
 
-    // hide error message if previously shown
-    const errorMessageSpan = document.getElementById(eventTarget.id + '-error-message');
-    errorMessageSpan.classList.add('hidden');
+    switch (eventTarget.value) {
+        case "Channel":
+            await loadTeamTemplate("channel.json");
+            break;
 
-    if (eventTarget.id !== CHANNEL_CF_KEY) return;
+        case "Fraud":
+            await loadTeamTemplate("fraud.json");
+            break;
 
-    // generate/remove Channel custom fields
-    const eventContainer = eventTarget.closest('.default-field-container');
+        case "Merchant":
+            await loadTeamTemplate("merchant.json");
+            break;
 
-    if (eventTarget.value !== 'Cabang') {
-      // when changes to other than 'Cabang' remove 'Cabang Penerima' custom field
-      const branchContainer = document.querySelector('.branch-container');
-      branchContainer?.remove();
-    } else {
-      // when changes to 'Cabang' generate 'Cabang Penerima' custom field
-      eventContainer.insertAdjacentHTML('afterend', generateCustomField(CABANG_PENERIMA_CF_KEY, 'branch-container'));
+        case "Non Fraud":
+            await loadTeamTemplate("non-fraud.json");
+            break;
     }
-  });
+});
 }
