@@ -10,7 +10,7 @@ export function addSubmitFormEventListener() {
     const updatedTaxonomyV2 = [];
     let requiredButEmptyCheck = false;
 
-    const inputs = document.querySelectorAll('#customForm select.choices__input, #customForm input:not(.choices__input)');
+    const inputs = document.querySelectorAll("#customForm select, #customForm input");
     inputs.forEach(input => {
       if (input.required) {
         const errorMessageSpan = document.getElementById(input.id + '-error-message');
@@ -50,11 +50,10 @@ export function addSubmitFormEventListener() {
       }
     });
 
-    updatedCustomFields['h2'] = updatedTaxonomyV2;
-
     if (!requiredButEmptyCheck) {
       console.log(updatedCustomFields);
-
+console.log("Submitting payload:");
+console.log(JSON.stringify(updatedCustomFields, null, 2));
       const submittedData = await yAppWidget.update(
         "update_custom_fields",
         updatedCustomFields,
