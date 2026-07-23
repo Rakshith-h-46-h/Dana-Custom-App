@@ -1,0 +1,30 @@
+[
+  {
+    "key": "k9",
+    "isRequired": false
+  },
+  {
+    "key": "k10",
+    "isRequired": true
+  },
+  {
+    "key": "k15",
+    "isRequired": true
+  },
+  {
+    "key": "k19",
+    "isRequired": false
+  },
+  {
+    "key": "s2",
+    "isRequired": false
+  },
+  {
+    "key": "s5",
+    "isRequired": false
+  },
+  {
+    "key": "s3",
+    "isRequired": false
+  }
+]
