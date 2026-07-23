@@ -39,12 +39,9 @@ export function addSubmitFormEventListener() {
           const time = new Date().toISOString().split('T')[1];
           updatedCustomFields[input.id] = input.value + 'T' + time;
         }
-      } else if (input.type === 'number') {
-        // handle number custom field -> parse value to number
-        if (input.value) {
-          updatedCustomFields[input.id] = parseInt(input.value);
-        }
-      } else {
+     } else if (input.type === "number") {
+    updatedCustomFields[input.id] = String(input.value);
+} else {
         // else -> regular custom field
         updatedCustomFields[input.id] = input.value;
       }
