@@ -29,10 +29,10 @@ export function addSubmitFormEventListener() {
         const level = parseInt(input.id[input.id.length - 1]);
         const chosenOption = input.options[input.selectedIndex];
 
-        updatedTaxonomyV2[level] = {
-          name: chosenOption.value,
-          id: chosenOption.getAttribute('data-taxonomy-v2-option-id'),
-        };
+        // updatedTaxonomyV2[level] = {
+        //   name: chosenOption.value,
+        //   id: chosenOption.getAttribute('data-taxonomy-v2-option-id'),
+        // };
       } else if (input.type === 'date') {
         // handle date custom field -> add time
         if (input.value) {
