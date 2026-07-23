@@ -1,7 +1,7 @@
 [
   {
     "key": "k9",
-    "isRequired": false
+    "isRequired": true
   },
   {
     "key": "k10",
@@ -13,14 +13,14 @@
   },
   {
     "key": "s2",
-    "isRequired": false
+    "isRequired": true
   },
   {
     "key": "s5",
-    "isRequired": false
+    "isRequired": true
   },
   {
     "key": "s3",
-    "isRequired": false
+    "isRequired": true
   }
 ]
