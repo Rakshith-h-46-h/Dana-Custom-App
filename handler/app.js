@@ -15,6 +15,33 @@ export let yAppWidget = null;
 
       window.PayloadData = data.eventResponse.eventData.ticketDetails;
       window.PayloadCustomFields = data.eventResponse.eventData.customFields;
+      const team = window.PayloadData.customFields.k19;
+
+let fileName = "";
+
+switch (team) {
+  case "Fraud":
+    fileName = "fraud";
+    break;
+
+  case "Channel":
+    fileName = "channel";
+    break;
+
+  case "Merchant":
+    fileName = "merchant";
+    break;
+
+  case "Non Fraud":
+    fileName = "non-fraud";
+    break;
+
+  default:
+    console.error("Unknown team:", team);
+    return;
+}
+
+await loadTeamTemplate(fileName);
       console.table(
   window.PayloadCustomFields.map(cf => ({
     key: cf.key,
@@ -32,9 +59,6 @@ export let yAppWidget = null;
 
 function runRenderForm() {
   const messageDisplay = document.getElementById("ticket-title-forbidden");
-console.log("DefaultFieldsData:", window.DefaultFieldsData);
-  console.log("PayloadData:", window.PayloadData);
-  console.log("PayloadCustomFields:", window.PayloadCustomFields);
   if (
     window.DefaultFieldsData &&
     window.PayloadData &&
