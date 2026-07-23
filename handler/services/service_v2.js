@@ -12,6 +12,9 @@ export function addSubmitFormEventListener() {
 
     const inputs = document.querySelectorAll("#customForm select, #customForm input");
     inputs.forEach(input => {
+       if (!input.id || input.id.trim() === "") {
+    return;
+  }
       if (input.required) {
         const errorMessageSpan = document.getElementById(input.id + '-error-message');
 
