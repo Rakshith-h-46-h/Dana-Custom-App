@@ -53,12 +53,18 @@ function runRenderForm() {
   }
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  fetch(`./assets/json/${fileName}.json`)
-    .then((response) => response.json())
-    .then((defaultFieldsData) => {
-      window.DefaultFieldsData = defaultFieldsData;
-      runRenderForm();
-    })
-    .catch((error) => console.error("Error fetching JSON:", error));
-});
+export async function loadTeamTemplate(fileName) {
+  try {
+    const response = await fetch(`./assets/json/${fileName}.json`);
+
+    if (!response.ok) {
+      throw new Error(`Unable to load ${fileName}.json`);
+    }
+
+    window.DefaultFieldsData = await response.json();
+
+    runRenderForm();
+  } catch (error) {
+    console.error("Error loading template:", error);
+  }
+}
