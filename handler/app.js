@@ -32,7 +32,9 @@ export let yAppWidget = null;
 
 function runRenderForm() {
   const messageDisplay = document.getElementById("ticket-title-forbidden");
-
+console.log("DefaultFieldsData:", window.DefaultFieldsData);
+  console.log("PayloadData:", window.PayloadData);
+  console.log("PayloadCustomFields:", window.PayloadCustomFields);
   if (
     window.DefaultFieldsData &&
     window.PayloadData &&
