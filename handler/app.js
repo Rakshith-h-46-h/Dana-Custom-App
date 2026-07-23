@@ -54,7 +54,7 @@ function runRenderForm() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  fetch("./assets/json/defaultFields.json")
+  fetch("./assets/json/fraud.json")
     .then((response) => response.json())
     .then((defaultFieldsData) => {
       window.DefaultFieldsData = defaultFieldsData;
