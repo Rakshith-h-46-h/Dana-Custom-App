@@ -10,7 +10,7 @@ export let yAppWidget = null;
   await applyDebugState(runRenderForm);
   yAppWidget
     .ask("ask_ticket_cf_info")
-    .then((data) => {
+    .then(async (data) => {
       console.log("got an answer back from cloud for ask_ticket_info", data);
 
       window.PayloadData = data.eventResponse.eventData.ticketDetails;
@@ -41,16 +41,14 @@ switch (team) {
     return;
 }
 
-loadTeamTemplate(fileName);
-      console.table(
-  window.PayloadCustomFields.map(cf => ({
-    key: cf.key,
-    name: cf.name
-  }))
-);
-      
+await loadTeamTemplate(fileName);
 
-      runRenderForm();
+console.table(
+    window.PayloadCustomFields.map(cf => ({
+        key: cf.key,
+        name: cf.name
+    }))
+);
     })
     .catch((e) => {
       console.log("Error while fetching ask_ticket_cf_info", e);
@@ -79,14 +77,17 @@ function runRenderForm() {
 }
 
 export async function loadTeamTemplate(fileName) {
-    console.log("Loading:", fileName);
+    try {
+        const response = await fetch(`./assets/json/${fileName}.json`);
 
-    const response = await fetch(`./assets/json/${fileName}.json`);
-    console.log("Status:", response.status);
+        console.log("Status:", response.status);
 
-    window.DefaultFieldsData = await response.json();
+        window.DefaultFieldsData = await response.json();
 
-    console.log("Loaded:", window.DefaultFieldsData);
+        console.log("Loaded:", window.DefaultFieldsData);
 
-    runRenderForm();
+        runRenderForm();   // ✅ only render after JSON is loaded
+    } catch (error) {
+        console.error(error);
+    }
 }
