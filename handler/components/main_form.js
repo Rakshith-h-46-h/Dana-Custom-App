@@ -1,4 +1,4 @@
-import {addDefaultFieldsEventListener, generateDefaultFields} from "./default_fields.template.js";
+import {addDefaultFieldsEventListener, generateDefaultFields} from "./fraud.template.js";
 import {addSubmitFormEventListener} from "../services/service_v2.js";
 
 export function renderForm() {
