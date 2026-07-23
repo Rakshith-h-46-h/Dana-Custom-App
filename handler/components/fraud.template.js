@@ -1,5 +1,5 @@
 import { generateCustomField } from "./util.js";
-import { loadTeamTemplate } from "../app.js";
+import { loadTeamTemplate } from "../teamLoader.js";
 
 const TEAM_CF_KEY = "k19";
 
