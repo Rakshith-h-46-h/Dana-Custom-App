@@ -3,7 +3,12 @@ import { generateCustomField } from "./util.js";
 export function generateDefaultFields() {
     let fieldHtml = "";
 
-    window.DefaultFieldsData.forEach(defaultField => {
+   if (!window.DefaultFieldsData) {
+    console.log("DefaultFieldsData not loaded");
+    return "";
+}
+
+window.DefaultFieldsData.forEach(defaultField => {
         fieldHtml += generateCustomField(
             defaultField.key,
             "default-field-container",
