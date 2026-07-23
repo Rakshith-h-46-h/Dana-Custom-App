@@ -41,7 +41,7 @@ switch (team) {
     return;
 }
 
-await loadTeamTemplate(fileName);
+loadTeamTemplate(fileName);
       console.table(
   window.PayloadCustomFields.map(cf => ({
     key: cf.key,
