@@ -60,7 +60,6 @@ loadTeamTemplate(fileName);
 function runRenderForm() {
   const messageDisplay = document.getElementById("ticket-title-forbidden");
   if (
-    window.DefaultFieldsData &&
     window.PayloadData &&
     window.PayloadCustomFields
   ) {
