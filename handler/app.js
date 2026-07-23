@@ -15,6 +15,13 @@ export let yAppWidget = null;
 
       window.PayloadData = data.eventResponse.eventData.ticketDetails;
       window.PayloadCustomFields = data.eventResponse.eventData.customFields;
+      console.table(
+  window.PayloadCustomFields.map(cf => ({
+    key: cf.key,
+    name: cf.name
+  }))
+);
+      console.log(window.PayloadCustomFields.31.radiobuttons.0)
 
       runRenderForm();
     })
