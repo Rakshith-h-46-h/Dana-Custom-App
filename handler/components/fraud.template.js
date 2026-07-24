@@ -8,7 +8,7 @@ export function generateDefaultFields() {
     return "";
 }
 
-window.DefaultFieldsData.forEach(defaultField => {
+window.DefaultFieldsData.defaultFields.forEach(defaultField => {
         fieldHtml += generateCustomField(
             defaultField.key,
             "default-field-container",
