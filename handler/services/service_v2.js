@@ -39,10 +39,17 @@ export function addSubmitFormEventListener() {
      } else if (input.type === "number") {
     updatedCustomFields[input.id] = String(input.value);
 } else {
-    // Only send non-empty values
-    if (input.value.trim() !== "") {
+    if (input.value.trim() === "") {
+        if (input.required) {
+            requiredButEmptyCheck = true;
+            document
+                .getElementById(input.id + "-error-message")
+                ?.classList.remove("hidden");
+        }
+    } else {
         updatedCustomFields[input.id] = input.value;
     }
+}
 })
 
     if (!requiredButEmptyCheck) {
