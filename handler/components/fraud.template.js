@@ -58,6 +58,7 @@ export function generateCaseFields(selectedCase) {
 //     });
 // }
 export function addDefaultFieldsEventListener() {
+    console.log("addDefaultFieldsEventListener called");
     const formContainer = document.getElementById("formContainer");
 
     formContainer.addEventListener("change", (event) => {
