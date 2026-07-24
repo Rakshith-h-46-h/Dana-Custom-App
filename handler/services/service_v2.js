@@ -54,6 +54,8 @@ export function addSubmitFormEventListener() {
 })
 
     if (!requiredButEmptyCheck) {
+      // Add Team field manually
+updatedCustomFields["k19"] = window.PayloadData.customFields.k19;
       console.log(updatedCustomFields);
 console.log("Submitting payload:");
 console.log(JSON.stringify(updatedCustomFields, null, 2));
