@@ -35,3 +35,25 @@ export function generateCaseFields(selectedCase) {
 
     return fieldHtml;
 }
+export function addDefaultFieldsEventListener() {
+    const formContainer = document.getElementById("formContainer");
+
+    formContainer.addEventListener("change", (event) => {
+
+        // Case dropdown
+        if (event.target.id !== "k7") return;
+
+        const selectedCase = event.target.value;
+
+        // Remove previous case fields
+        document.querySelectorAll(".case-field-container").forEach(el => el.remove());
+
+        // Generate new case fields
+        const caseHtml = generateCaseFields(selectedCase);
+
+        // Insert below the Case dropdown
+        event.target
+            .closest(".default-field-container")
+            .insertAdjacentHTML("afterend", caseHtml);
+    });
+}
