@@ -28,14 +28,8 @@ export function addSubmitFormEventListener() {
       }
 
       if (input.id.startsWith('h2')) {
-        // h2 -> taxonomy v2
         const level = parseInt(input.id[input.id.length - 1]);
         const chosenOption = input.options[input.selectedIndex];
-
-        // updatedTaxonomyV2[level] = {
-        //   name: chosenOption.value,
-        //   id: chosenOption.getAttribute('data-taxonomy-v2-option-id'),
-        // };
       } else if (input.type === 'date') {
         // handle date custom field -> add time
         if (input.value) {
@@ -49,7 +43,7 @@ export function addSubmitFormEventListener() {
     if (input.value.trim() !== "") {
         updatedCustomFields[input.id] = input.value;
     }
-});
+})
 
     if (!requiredButEmptyCheck) {
       console.log(updatedCustomFields);
