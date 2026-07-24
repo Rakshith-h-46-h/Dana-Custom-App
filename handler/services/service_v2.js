@@ -36,10 +36,10 @@ export function addSubmitFormEventListener() {
           const time = new Date().toISOString().split('T')[1];
           updatedCustomFields[input.id] = input.value + 'T' + time;
         }
-     } else if (input.type === "number") {
-    updatedCustomFields[input.id] = String(input.value);
-} else {
-    if (input.value.trim() === "") {
+   } else if (input.type === "number") {
+    const value = input.value.trim();
+
+    if (value === "") {
         if (input.required) {
             requiredButEmptyCheck = true;
             document
@@ -47,7 +47,7 @@ export function addSubmitFormEventListener() {
                 ?.classList.remove("hidden");
         }
     } else {
-        updatedCustomFields[input.id] = input.value;
+        updatedCustomFields[input.id] = value;
     }
 }
 })
