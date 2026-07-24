@@ -52,7 +52,7 @@ export function addSubmitFormEventListener() {
     updatedCustomFields[input.id] = value;
 }
 })
-
+    
     if (!requiredButEmptyCheck) {
       // Add Team field manually
 updatedCustomFields["k19"] = window.PayloadData.customFields.k19;
