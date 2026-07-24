@@ -83,8 +83,10 @@ export function addDefaultFieldsEventListener() {
         console.log("Generated HTML:", caseHtml);
 
         // Insert below the Case dropdown
+        console.log(event.target.closest(".default-field-container"));
         event.target
             .closest(".default-field-container")
+            
             .insertAdjacentHTML("afterend", caseHtml);
     });
 }
