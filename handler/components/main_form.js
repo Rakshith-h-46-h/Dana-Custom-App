@@ -1,4 +1,7 @@
-import { generateDefaultFields } from "./fraud.template.js";
+import {
+    generateDefaultFields,
+    addDefaultFieldsEventListener
+} from "./fraud.template.js";
 import {addSubmitFormEventListener} from "../services/service_v2.js";
 
 export function renderForm() {
@@ -14,6 +17,7 @@ export function renderForm() {
   formHtml += '<button id="btn_store">Submit</button>';
   formHtml += "</form>";
 
-  formContainer.innerHTML = formHtml;
-  addSubmitFormEventListener();
+ formContainer.innerHTML = formHtml;
+addDefaultFieldsEventListener();
+addSubmitFormEventListener();
 }
