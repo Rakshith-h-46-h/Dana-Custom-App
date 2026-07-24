@@ -45,10 +45,11 @@ export function addSubmitFormEventListener() {
      } else if (input.type === "number") {
     updatedCustomFields[input.id] = String(input.value);
 } else {
-        // else -> regular custom field
+    // Only send non-empty values
+    if (input.value.trim() !== "") {
         updatedCustomFields[input.id] = input.value;
-      }
-    });
+    }
+});
 
     if (!requiredButEmptyCheck) {
       console.log(updatedCustomFields);
