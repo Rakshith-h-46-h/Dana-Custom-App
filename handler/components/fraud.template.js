@@ -49,6 +49,16 @@ export function addDefaultFieldsEventListener() {
 const caseHtml = generateCaseFields(selectedCase);
 
 document.getElementById("caseFieldsContainer").innerHTML = caseHtml;
+        document
+    .querySelectorAll("#caseFieldsContainer select")
+    .forEach(select => {
+        new Choices(select, {
+            searchEnabled: true,
+            shouldSort: false,
+            itemSelectText: "",
+            removeItemButton: true
+        });
+    });
     });
 }
 
