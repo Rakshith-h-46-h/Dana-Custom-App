@@ -1,26 +1,38 @@
-[
-  {
-    "key": "k9",
-    "isRequired": true
-  },
-  {
-    "key": "k10",
-    "isRequired": true
-  },
-  {
-    "key": "k15",
-    "isRequired": true
-  },
-  {
-    "key": "s2",
-    "isRequired": true
-  },
-  {
-    "key": "s5",
-    "isRequired": true
-  },
-  {
-    "key": "s3",
-    "isRequired": true
+{
+  "defaultFields": [
+    {
+      "key": "k9",
+      "isRequired": true
+    },
+    {
+      "key": "k10",
+      "isRequired": true
+    },
+    {
+      "key": "k15",
+      "isRequired": true
+    },
+    {
+      "key": "k20",
+      "isRequired": true
+    }
+  ],
+  "cases": {
+    "Reporting::Phising": [
+      {
+        "key": "s2",
+        "isRequired": true
+      },
+      {
+        "key": "s3",
+        "isRequired": false
+      }
+    ],
+    "Reporting::ATO": [
+      {
+        "key": "s5",
+        "isRequired": true
+      }
+    ]
   }
-]
+}
