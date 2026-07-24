@@ -11,10 +11,11 @@ export function renderForm() {
   const messageDisplay = document.getElementById("ticket-title");
   messageDisplay.innerText = "Conditional Custom Fields (#" + window.PayloadData.ticketId + ")";
 
-  formHtml += generateDefaultFields();
- 
+ formHtml += generateDefaultFields();
 
-  formHtml += '<button id="btn_store">Submit</button>';
+formHtml += `<div id="caseFieldsContainer"></div>`;
+
+formHtml += '<button id="btn_store">Submit</button>';
   formHtml += "</form>";
 
  formContainer.innerHTML = formHtml;
