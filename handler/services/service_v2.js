@@ -36,7 +36,7 @@ export function addSubmitFormEventListener() {
           const time = new Date().toISOString().split('T')[1];
           updatedCustomFields[input.id] = input.value + 'T' + time;
         }
-   } else if (input.type === "number") {
+   } else {
     const value = input.value.trim();
 
     if (value === "") {
@@ -46,9 +46,10 @@ export function addSubmitFormEventListener() {
                 .getElementById(input.id + "-error-message")
                 ?.classList.remove("hidden");
         }
-    } else {
-        updatedCustomFields[input.id] = value;
+        return;
     }
+
+    updatedCustomFields[input.id] = value;
 }
 })
 
