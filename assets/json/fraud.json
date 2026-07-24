@@ -39,7 +39,7 @@
       "isRequired": true
     },
     {
-      "key": "k17"
+      "key": "k17",
       "isRequired": true
     },
     {
@@ -62,7 +62,7 @@
       "isRequired": false
     },
     {
-      "key": "k9"
+      "key": "k9",
       "isRequired": true
     },
     {
@@ -81,7 +81,7 @@
       "isRequired": true
     },
     {
-      "key": "s7"
+      "key": "s7",
       "isRequired": false
     }
   ],
