@@ -1,36 +1,104 @@
 {
   "defaultFields": [
     {
-      "key": "k9",
+      "key": "s2",
+      "isRequired": true
+    },
+    {
+      "key": "k4",
+      "isRequired": true
+    },
+    {
+      "key": "k5",
+      "isRequired": true
+    },
+    {
+      "key": "k6",
+      "isRequired": true
+    },{
+      "key": "k7",
+      "isRequired": true
+    },
+    {
+      "key": "k18",
+      "isRequired": true
+    },
+    {
+      "key": "k13",
+      "isRequired": true
+    },
+    {
+      "key": "s5",
+      "isRequired": true
+    },
+    {
+      "key": "s3",
+      "isRequired": true
+    },{
+      "key": "s6",
+      "isRequired": true
+    },
+    {
+      "key": "k17"
+      "isRequired": true
+    },
+    {
+      "key": "k12",
+      "isRequired": true
+    },
+    {
+      "key": "k11",
+      "isRequired": true
+    },
+    {
+      "key": "s8",
+      "isRequired": true
+    },
+    {
+      "key": "s4",
+      "isRequired": false
+    },{
+      "key": "k8",
+      "isRequired": false
+    },
+    {
+      "key": "k9"
       "isRequired": true
     },
     {
       "key": "k10",
-      "isRequired": true
+      "isRequired": false
     },
     {
       "key": "k15",
+      "isRequired": false
+    },
+    {
+      "key": "k2",
+      "isRequired": true
+    },{
+      "key": "k3",
       "isRequired": true
     },
     {
-      "key": "k7",
-      "isRequired": true
+      "key": "s7"
+      "isRequired": false
     }
   ],
   "cases": {
     "Reporting::Phising": [
       {
-        "key": "s2",
+        "key": "k16",
         "isRequired": true
       },
       {
-        "key": "s3",
+        "key": "s6",
         "isRequired": false
       }
     ],
     "Reporting::ATO": [
       {
-        "key": "s5",
+        "key": "k16",
         "isRequired": true
       }
     ]
