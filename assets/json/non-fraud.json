@@ -235,7 +235,7 @@
       {
         "key": "s31",
         "isRequired": true
-      },
+      }
       
     ],
     "DANA Agen::DANA Bisnis": [
@@ -246,7 +246,7 @@
       {
         "key": "s31",
         "isRequired": true
-      },
+      }
     ],
     "Crash/Bug::DANA Bisnis": [
       {
