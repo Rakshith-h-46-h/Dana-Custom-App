@@ -113,7 +113,7 @@
       {
         "key": "s22",
         "isRequired": true
-      },
+      }
     ],
     "Cashout_": [
       {
@@ -264,7 +264,7 @@
       {
         "key": "s31",
         "isRequired": true
-      },
+      }
       
     ],
     "Crash/Bug::History Transaction": [
