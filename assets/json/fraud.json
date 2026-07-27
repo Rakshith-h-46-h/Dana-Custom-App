@@ -39,7 +39,7 @@
       "isRequired": true
     },
     {
-      "key": "k17",
+      "key": "k17"
       "isRequired": true
     },
     {
@@ -62,7 +62,7 @@
       "isRequired": false
     },
     {
-      "key": "k9",
+      "key": "k9"
       "isRequired": true
     },
     {
@@ -71,6 +71,9 @@
     },
     {
       "key": "k15",
+      "isRequired": false
+    },{
+      "key": "s1",
       "isRequired": false
     },
     {
@@ -81,26 +84,118 @@
       "isRequired": true
     },
     {
-      "key": "s7",
+      "key": "s7"
       "isRequired": false
     }
   ],
   "cases": {
     "Reporting::Phising": [
       {
-        "key": "k16",
+        "key": "s3",
         "isRequired": true
       },
       {
         "key": "s6",
-        "isRequired": false
+        "isRequired": true
+      },
+      {
+        "key": "s14",
+        "isRequired": true
+      },
+      {
+        "key": "s15",
+        "isRequired": true
+      },
+      {
+        "key": "s16",
+        "isRequired": true
+      },
+      {
+        "key": "s17",
+        "isRequired": true
+      },
+      {
+        "key": "s18",
+        "isRequired": true
+      },
+      {
+        "key": "s19",
+        "isRequired": true
       }
     ],
     "Reporting::ATO": [
       {
-        "key": "k16",
+        "key": "s3",
+        "isRequired": true
+      },
+      {
+        "key": "s6",
+        "isRequired": true
+      },
+      {
+        "key": "s14",
+        "isRequired": true
+      },
+      {
+        "key": "s15",
+        "isRequired": true
+      },
+      {
+        "key": "s16",
+        "isRequired": true
+      },
+      {
+        "key": "s17",
+        "isRequired": true
+      },
+      {
+        "key": "s18",
+        "isRequired": true
+      },
+      {
+        "key": "s19",
         "isRequired": true
       }
-    ]
+    ],
+    "Reporting::Scam": [
+      {
+        "key": "s3",
+        "isRequired": true
+      },
+      {
+        "key": "s6",
+        "isRequired": true
+      },
+      {
+        "key": "s14",
+        "isRequired": true
+      },
+      {
+        "key": "s15",
+        "isRequired": true
+      },
+      {
+        "key": "s16",
+        "isRequired": true
+      },
+      {
+        "key": "s17",
+        "isRequired": true
+      },
+      {
+        "key": "s18",
+        "isRequired": true
+      },
+      {
+        "key": "s19",
+        "isRequired": true
+      }
+    ],
+    "Blacklist":[
+      {
+        "key": "s8",
+        "isRequired": true
+      }
+      ]
   }
 }
