@@ -1,26 +1,636 @@
-[
-  {
-    "key": "k9",
-    "isRequired": false
-  },
-  {
-    "key": "k10",
-    "isRequired": true
-  },
-  {
-    "key": "k15",
-    "isRequired": true
-  },
-  {
-    "key": "s2",
-    "isRequired": false
-  },
-  {
-    "key": "s5",
-    "isRequired": false
-  },
-  {
-    "key": "s3",
-    "isRequired": false
+{
+  "defaultFields": [
+    {
+      "key": "s2",
+      "isRequired": true
+    },
+     {
+      "key": "s12",
+      "isRequired": true
+    },
+     {
+      "key": "s3",
+      "isRequired": true
+    },
+    {
+      "key": "k4",
+      "isRequired": true
+    },
+    {
+      "key": "k5",
+      "isRequired": true
+    },
+    {
+      "key": "k6",
+      "isRequired": true
+    },{
+      "key": "k7",
+      "isRequired": true
+    },
+    {
+      "key": "k18",
+      "isRequired": true
+    },
+    {
+      "key": "k13",
+      "isRequired": true
+    },
+    {
+      "key": "s3",
+      "isRequired": true
+    },{
+      "key": "s6",
+      "isRequired": true
+    },
+    {
+      "key": "k17",
+      "isRequired": true
+    },
+    {
+      "key": "k12",
+      "isRequired": true
+    },
+    {
+      "key": "k11",
+      "isRequired": true
+    },
+    {
+      "key": "s8",
+      "isRequired": true
+    },
+    {
+      "key": "s4",
+      "isRequired": false
+    },{
+      "key": "k8",
+      "isRequired": false
+    },
+    {
+      "key": "k9",
+      "isRequired": true
+    },
+    {
+      "key": "k10",
+      "isRequired": false
+    },
+    {
+      "key": "k15",
+      "isRequired": false
+    },{
+      "key": "s1",
+      "isRequired": false
+    },
+    {
+      "key": "k2",
+      "isRequired": true
+    },{
+      "key": "k3",
+      "isRequired": true
+    },
+    {
+      "key": "s7",
+      "isRequired": false
+    }
+  ],
+  "cases": {
+    "Voucher": [
+      {
+        "key": "s5",
+        "isRequired": false
+      },
+      {
+        "key": "s6",
+        "isRequired": false
+      },
+      {
+        "key": "k16",
+        "isRequired": true
+      },
+      {
+        "key": "s21",
+        "isRequired": true
+      },
+      {
+        "key": "s22",
+        "isRequired": true
+      },
+    ],
+    "Cashout_": [
+      {
+        "key": "s4",
+        "isRequired": true
+      },
+      {
+        "key": "s23",
+        "isRequired": true
+      },
+      {
+        "key": "s24",
+        "isRequired": true
+      },
+      {
+        "key": "s25",
+        "isRequired": true
+      }
+    ],
+    "Transfer KYC": [
+      {
+        "key": "s8",
+        "isRequired": true
+      },
+      {
+        "key": "s4",
+        "isRequired": true
+      },
+      {
+        "key": "s26",
+        "isRequired": true
+      },
+      {
+        "key": "s27",
+        "isRequired": true
+      },
+      {
+        "key": "s23",
+        "isRequired": true
+      },
+      {
+        "key": "s24",
+        "isRequired": true
+      },
+      {
+        "key": "s25",
+        "isRequired": true
+      },
+      {
+        "key": "s28",
+        "isRequired": true
+      }
+    ],
+    "Revoke": [
+      {
+        "key": "s26",
+        "isRequired": true
+      },
+      {
+        "key": "s27",
+        "isRequired": true
+      }
+    ],
+    "revoked": [
+      {
+        "key": "s26",
+        "isRequired": true
+      },
+      {
+        "key": "s27",
+        "isRequired": true
+      }
+    ],
+    "WNA Revoke": [
+      {
+        "key": "s26",
+        "isRequired": true
+      },
+      {
+        "key": "s27",
+        "isRequired": true
+      }
+    ],
+    "Blacklist": [
+      {
+        "key": "s8",
+        "isRequired": true
+      }
+    ],
+    "Selfie Blacklist": [
+      {
+        "key": "s8",
+        "isRequired": true
+      }
+    ],
+    "KYB_Account Blacklist": [
+      {
+        "key": "s8",
+        "isRequired": true
+      }
+    ],
+    "Suspicious ": [
+      {
+        "key": "s8",
+        "isRequired": true
+      }
+    ],
+    "Suspicious DANA Viz": [
+      {
+        "key": "s8",
+        "isRequired": true
+      }
+    ],
+    "System Busy::DANA Bisnis": [
+      {
+        "key": "k16",
+        "isRequired": true
+      },
+      {
+        "key": "s31",
+        "isRequired": true
+      },
+      
+    ],
+    "DANA Agen::DANA Bisnis": [
+      {
+        "key": "k16",
+        "isRequired": true
+      },
+      {
+        "key": "s31",
+        "isRequired": true
+      },
+    ],
+    "Crash/Bug::DANA Bisnis": [
+      {
+        "key": "k16",
+        "isRequired": true
+      },
+      {
+        "key": "s29",
+        "isRequired": true
+      },
+      {
+        "key": "s30",
+        "isRequired": true
+      },
+      {
+        "key": "s31",
+        "isRequired": true
+      },
+      
+    ],
+    "Crash/Bug::History Transaction": [
+      {
+        "key": "k16",
+        "isRequired": true
+      },
+      {
+        "key": "s29",
+        "isRequired": true
+      },
+      {
+        "key": "s30",
+        "isRequired": true
+      }
+      
+    ],
+    "Crash/Bug::DANA Goals": [
+      {
+        "key": "k16",
+        "isRequired": true
+      },
+      {
+        "key": "s29",
+        "isRequired": true
+      },
+      {
+        "key": "s30",
+        "isRequired": true
+      }
+      
+    ],
+    "Crash/Bug::Send Money": [
+      {
+        "key": "k16",
+        "isRequired": true
+      },
+      {
+        "key": "s29",
+        "isRequired": true
+      },
+      {
+        "key": "s30",
+        "isRequired": true
+      }
+      
+    ],
+    "Crash/Bug::Scan QRIS": [
+      {
+        "key": "k16",
+        "isRequired": true
+      },
+      {
+        "key": "s29",
+        "isRequired": true
+      },
+      {
+        "key": "s30",
+        "isRequired": true
+      }
+      
+    ],
+    "Crash/Bug::Saldo Digital": [
+      {
+        "key": "k16",
+        "isRequired": true
+      },
+      {
+        "key": "s29",
+        "isRequired": true
+      },
+      {
+        "key": "s30",
+        "isRequired": true
+      }
+      
+    ],
+    "Crash/Bug::Mobile Recharge": [
+      {
+        "key": "k16",
+        "isRequired": true
+      },
+      {
+        "key": "s29",
+        "isRequired": true
+      },
+      {
+        "key": "s30",
+        "isRequired": true
+      }
+      
+    ],
+    "Crash/Bug::Electricity": [
+      {
+        "key": "k16",
+        "isRequired": true
+      },
+      {
+        "key": "s29",
+        "isRequired": true
+      },
+      {
+        "key": "s30",
+        "isRequired": true
+      }
+      
+    ],
+    "Crash/Bug::DANA Deals": [
+      {
+        "key": "k16",
+        "isRequired": true
+      },
+      {
+        "key": "s29",
+        "isRequired": true
+      },
+      {
+        "key": "s30",
+        "isRequired": true
+      }
+      
+    ],
+    "Crash/Bug::Voucher A+ Rewards": [
+      {
+        "key": "k16",
+        "isRequired": true
+      },
+      {
+        "key": "s29",
+        "isRequired": true
+      },
+      {
+        "key": "s30",
+        "isRequired": true
+      }
+      ],
+    "Crash/Bug::eMAS": [
+      {
+        "key": "k16",
+        "isRequired": true
+      },
+      {
+        "key": "s29",
+        "isRequired": true
+      },
+      {
+        "key": "s30",
+        "isRequired": true
+      }
+      ],
+    "Crash/Bug::BPJS TK": [
+      {
+        "key": "k16",
+        "isRequired": true
+      },
+      {
+        "key": "s29",
+        "isRequired": true
+      },
+      {
+        "key": "s30",
+        "isRequired": true
+      }
+      ],
+    "Crash/Bug::Paylater": [
+      {
+        "key": "k16",
+        "isRequired": true
+      },
+      {
+        "key": "s29",
+        "isRequired": true
+      },
+      {
+        "key": "s30",
+        "isRequired": true
+      }
+      ],
+    "Crash/Bug::Login": [
+      {
+        "key": "k16",
+        "isRequired": true
+      },
+      {
+        "key": "s29",
+        "isRequired": true
+      },
+      {
+        "key": "s30",
+        "isRequired": true
+      }
+      ],
+    "Crash/Bug::Water": [
+      {
+        "key": "k16",
+        "isRequired": true
+      },
+      {
+        "key": "s29",
+        "isRequired": true
+      },
+      {
+        "key": "s30",
+        "isRequired": true
+      }
+      ],
+    "Crash/Bug::Water": [
+      {
+        "key": "k16",
+        "isRequired": true
+      },
+      {
+        "key": "s29",
+        "isRequired": true
+      },
+      {
+        "key": "s30",
+        "isRequired": true
+      }
+      ],
+    "Crash/Bug": [
+      {
+        "key": "k16",
+        "isRequired": true
+      },
+      {
+        "key": "s29",
+        "isRequired": true
+      },
+      {
+        "key": "s30",
+        "isRequired": true
+      }
+      
+    ],
+    "Crash/Bug::PGN Gas": [
+      {
+        "key": "k16",
+        "isRequired": true
+      },
+      {
+        "key": "s29",
+        "isRequired": true
+      },
+      {
+        "key": "s30",
+        "isRequired": true
+      }
+      
+    ],
+    "Crash/Bug::Installment": [
+      {
+        "key": "k16",
+        "isRequired": true
+      },
+      {
+        "key": "s29",
+        "isRequired": true
+      },
+      {
+        "key": "s30",
+        "isRequired": true
+      }
+      
+    ],
+    "Crash/Bug::e-samsat": [
+      {
+        "key": "k16",
+        "isRequired": true
+      },
+      {
+        "key": "s29",
+        "isRequired": true
+      },
+      {
+        "key": "s30",
+        "isRequired": true
+      }
+      
+    ],
+    "Crash/Bug::Credit Card": [
+      {
+        "key": "k16",
+        "isRequired": true
+      },
+      {
+        "key": "s29",
+        "isRequired": true
+      },
+      {
+        "key": "s30",
+        "isRequired": true
+      }
+      
+    ],
+    "Crash/Bug::SIGNAL": [
+      {
+        "key": "k16",
+        "isRequired": true
+      },
+      {
+        "key": "s29",
+        "isRequired": true
+      },
+      {
+        "key": "s30",
+        "isRequired": true
+      }
+      
+    ],
+    "Wrong PIN/OTP": [
+      {
+        "key": "s32",
+        "isRequired": true
+      }
+      
+    ],
+    "Forgot/Wrong PIN/OTP": [
+      {
+        "key": "s32",
+        "isRequired": true
+      }
+      
+    ],
+    "System Busy::Input OTP": [
+      {
+        "key": "s32",
+        "isRequired": true
+      }
+      
+    ],
+    "OTP Not Received::by SMS": [
+      {
+        "key": "s32",
+        "isRequired": true
+      }
+      
+    ],
+    "OTP Not Received::by MissCall": [
+      {
+        "key": "s32",
+        "isRequired": true
+      }
+      
+    ],
+    "ChangeNumber::ChangeNumber": [
+      {
+        "key": "s33",
+        "isRequired": true
+      }
+      
+    ],
+    "ChangeNumber::CashoutManual": [
+      {
+        "key": "s33",
+        "isRequired": true
+      }
+      
+    ],
+    "ChangeNumber::TransferKYC": [
+      {
+        "key": "s33",
+        "isRequired": true
+      }
+      
+    ]
+    
   }
-]
+}
