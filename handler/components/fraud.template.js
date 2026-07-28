@@ -61,4 +61,21 @@ document.getElementById("caseFieldsContainer").innerHTML = caseHtml;
     });
     });
 }
+export function loadCaseFields(selectedCase) {
 
+    const caseHtml = generateCaseFields(selectedCase);
+
+    document.getElementById("caseFieldsContainer").innerHTML = caseHtml;
+
+    // Initialize Choices.js for new dropdowns
+    document
+        .querySelectorAll("#caseFieldsContainer select")
+        .forEach(select => {
+            new Choices(select, {
+                searchEnabled: true,
+                shouldSort: false,
+                itemSelectText: "",
+                removeItemButton: true
+            });
+        });
+}
