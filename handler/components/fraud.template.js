@@ -46,9 +46,7 @@ export function addDefaultFieldsEventListener() {
         const selectedCase = event.target.value;
 
         // Remove previous case fields
-const caseHtml = generateCaseFields(selectedCase);
-
-document.getElementById("caseFieldsContainer").innerHTML = caseHtml;
+          loadCaseFields(selectedCase);
         document
     .querySelectorAll("#caseFieldsContainer select")
     .forEach(select => {
