@@ -19,7 +19,15 @@ formHtml += `<div id="caseFieldsContainer"></div>`;
 formHtml += '<button id="btn_store">Submit</button>';
   formHtml += "</form>";
 
- formContainer.innerHTML = formHtml;
+formContainer.innerHTML = formHtml;
+
 addDefaultFieldsEventListener();
+
+const selectedCase = window.PayloadData.customFields.k7;
+
+if (selectedCase) {
+    loadCaseFields(selectedCase);
+}
+
 addSubmitFormEventListener();
 }
