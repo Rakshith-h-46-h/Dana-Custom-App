@@ -47,6 +47,10 @@
       "isRequired": true
     },
     {
+      "key": "k20",
+      "isRequired": true
+    },
+    {
       "key": "k12",
       "isRequired": true
     },
