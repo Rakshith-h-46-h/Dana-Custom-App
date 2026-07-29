@@ -28,6 +28,14 @@
       "isRequired": true
     },
     {
+      "key": "k14",
+      "isRequired": true
+    },
+    {
+      "key": "k8",
+      "isRequired": false
+    },
+    {
       "key": "s5",
       "isRequired": true
     },
